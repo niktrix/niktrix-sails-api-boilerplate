@@ -15,8 +15,9 @@ module.exports = {
 	list:function(req,res){
 		var params = req.params.all();
 		UserManager.currentuser(params,function(user){
-			console.log(user);
+			console.log("logged in user"+user);
 		});
+		
 		Candidate.find().exec(function(err,candidates){
 			res.ok(candidates);
 		});

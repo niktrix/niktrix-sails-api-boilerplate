@@ -11,13 +11,14 @@ module.exports.isEmailExists = function(useremail) {
 		})
 };
 
-module.exports.currentuser = function(params){
+module.exports.currentUser = function(params,cb){
 
 	User.find({email:params.email}).exec(function(err,user){
 		if(err){
+			cb(err);
 			return err;
 		}else{
-			console.log(user);
+			cb(user);
 			return user;
 		}
 	})
