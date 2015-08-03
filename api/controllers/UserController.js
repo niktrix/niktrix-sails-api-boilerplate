@@ -35,6 +35,17 @@ module.exports = {
 				return res.ok({user:"not exist"});
 			}
 		});
+	},
+
+	list: function(req,res){
+		var params = req.params.all();
+		User.find().exec(function(err,user){
+			if(user.length>0){
+				return res.ok(user);
+			}else{
+				return res.ok({user:"not exist"});
+			}
+		});
 	}
 
 

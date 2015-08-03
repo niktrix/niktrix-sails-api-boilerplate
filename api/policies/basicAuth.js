@@ -8,8 +8,6 @@ User.findOne({email:params.email}).exec(function(err,user){
 	}else{
 		return res.forbidden('You are not permitted to perform this action.');
 	}
-	
-
 });
 
 

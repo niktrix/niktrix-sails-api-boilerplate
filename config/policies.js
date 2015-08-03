@@ -51,5 +51,8 @@ module.exports.policies = {
 
   'CandidateController':{
     '*':'basicAuth'
-  }
+  },
+  'UserController':{
+    'list':'basicAuth'
+  },
 };
