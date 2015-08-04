@@ -13,9 +13,10 @@ module.exports = {
 	// create candidate
 
 	list:function(req,res){
+		var currentUser;
 		var params = req.params.all();
 		UserManager.currentuser(params,function(user){
-			console.log("logged in user"+user);
+			currentUser = user;
 		});
 		
 		Candidate.find().exec(function(err,candidates){
