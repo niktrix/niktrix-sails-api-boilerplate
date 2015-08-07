@@ -15,4 +15,6 @@ delete candidate
 TODO
 admin
 upload file
-
+Calander
+Dashboard
+Activities
