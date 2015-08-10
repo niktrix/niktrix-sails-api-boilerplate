@@ -37,3 +37,11 @@ payload to list candidate by pagination
 "page":{"limit":2,"page":3}
 }
 
+
+payload to search candidate
+
+{
+"email":"nicky2@gmail.com",
+"password":"password",
+"where":{"createdBy.email":"nicky2@gmail.com"}
+}
