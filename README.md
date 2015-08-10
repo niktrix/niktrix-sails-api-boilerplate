@@ -28,3 +28,12 @@ payload to create candidate
 "password":"password",
 "data":{"name":"somename","email":"someemail@gmail.com"}
 }
+
+payload to list candidate by pagination
+
+{
+"email":"nicky2@gmail.com",
+"password":"password",
+"page":{"limit":2,"page":3}
+}
+

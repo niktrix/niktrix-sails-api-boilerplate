@@ -18,7 +18,8 @@ module.exports = {
 		UserManager.currentUser(params,function(user){
 			currentUser = user;
 		});
-		Candidate.find().exec(function(err,candidates){
+		 
+		Candidate.find().paginate(params.page).exec(function(err,candidates){
 			res.ok(candidates);
 		});
 	},
