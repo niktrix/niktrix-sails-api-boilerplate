@@ -15,10 +15,9 @@ module.exports = {
 	list:function(req,res){
 		var currentUser;
 		var params = req.params.all();
-		UserManager.currentuser(params,function(user){
+		UserManager.currentUser(params,function(user){
 			currentUser = user;
 		});
-		
 		Candidate.find().exec(function(err,candidates){
 			res.ok(candidates);
 		});

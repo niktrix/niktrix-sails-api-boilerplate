@@ -16,10 +16,10 @@ module.exports = {
 		var params = req.params.all();
 		 User.find({email:params.email}).exec(function(err,user){
 			if(user.length>0){
-				 res.json({user:"exists"});
+				 res.json({ status : "fail",message : "User with same email exists"});
 			 }else{
 			 User.create(params).exec(function(err,creates){
-				res.json(creates);
+				res.json({ status : "success",data : creates});
 			 });
 			}
 			  
@@ -30,9 +30,9 @@ module.exports = {
 		var params = req.params.all();
 		User.find({email:params.email,password:params.password}).exec(function(err,user){
 			if(user.length>0){
-				return res.ok(user);
+				return res.ok({ status : "success",data : user,message : ""});
 			}else{
-				return res.ok({user:"not exist"});
+				return res.ok({ status : "fail",message : "Wrong username or password"});
 			}
 		});
 	},
