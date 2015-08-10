@@ -28,6 +28,23 @@ module.exports = {
 				Candidate.destroy({id:param.id}).exec(function(err){
 			 console.log('The record has been deleted');
 		});
+	},
+	create: function(req,res){
+		var params = req.params.all();
+		UserManager.currentUser(params,function(user){
+			currentUser = user;
+			params.data.createdBy = user;
+			Candidate.create(params.data).exec(function(err,creates){
+				if(err){
+					res.json({ status : "fail",data: err});
+				}else{
+					res.json({ status : "success",data: creates});
+				}
+		 });
+		});
+
+		
+		 
 	}
 	
 	

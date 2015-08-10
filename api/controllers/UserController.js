@@ -14,12 +14,14 @@ module.exports = {
 	// disable user
 	createUser: function(req,res){
 		var params = req.params.all();
-		 User.find({email:params.email}).exec(function(err,user){
+
+		 User.find({email:params.data.email}).exec(function(err,user){
 			if(user.length>0){
 				 res.json({ status : "fail",message : "User with same email exists"});
 			 }else{
-			 User.create(params).exec(function(err,creates){
-				res.json({ status : "success",data : creates});
+			 User.create(params.data).exec(function(err,creates){
+			 	if(err){res.json({ status : "fail",data : err});}else{
+				res.json({ status : "success",data : creates});}
 			 });
 			}
 			  

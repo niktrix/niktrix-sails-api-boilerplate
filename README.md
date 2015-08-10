@@ -18,3 +18,13 @@ upload file
 Calander
 Dashboard
 Activities
+
+
+
+payload to create candidate
+
+{
+"email":"nicky2@gmail.com",
+"password":"password",
+"data":{"name":"somename","email":"someemail@gmail.com"}
+}
