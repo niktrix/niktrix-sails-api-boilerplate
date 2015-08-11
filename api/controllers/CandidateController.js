@@ -35,6 +35,7 @@ module.exports = {
 		UserManager.currentUser(params,function(user){
 			currentUser = user;
 			params.data.createdBy = user;
+			console.log(user.$id);
 			Candidate.create(params.data).exec(function(err,creates){
 				if(err){
 					res.json({ status : "fail",data: err});
