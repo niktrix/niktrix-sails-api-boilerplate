@@ -26,7 +26,19 @@ payload to create candidate
 {
 "email":"nicky2@gmail.com",
 "password":"password",
-"data":{"name":"somename","email":"someemail@gmail.com"}
+"data":
+        {"name":"somename",
+        "email":"someemail@gmail.com",
+        "country":"India",
+        "currentLocation":"India",
+        "contact":["9929074162","9929074163"],
+        "totalExperience":"2",
+        "industry":"Some Industry",
+        "position":"some position",
+        "function":"some function",
+        "skills":["java","php"],
+        "profilePic":"/image/969696.jpg"
+        }
 }
 ```
 
