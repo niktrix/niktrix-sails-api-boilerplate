@@ -15,12 +15,18 @@ module.exports = {
 	list:function(req,res){
 		var currentUser;
 		var params = req.params.all();
+		console.log(req);
 		UserManager.currentUser(params,function(user){
 			currentUser = user;
 		});
 	
 		Candidate.find().where(params.where).paginate(params.page).exec(function(err,candidates){
-			res.ok(candidates);
+			 	
+			if(err){
+					res.json({ status : "fail",data: err});
+				}else{
+					res.json({ status : "success",data: candidates});
+				}
 		});
 	},
 
