@@ -2,22 +2,22 @@
 
 a [Sails](http://sailsjs.org) application
 
-Done
-login
-createuser
+Done</br>
+login</br>
+createuser</br>
 
-candidate
-list candidate
-create candidate
-delete candidate
+candidate</br>
+list candidate</br>
+create candidate</br>
+delete candidate</br>
 
 
-TODO
-admin
-upload file
-Calander
-Dashboard
-Activities
+TODO</br>
+admin</br>
+upload file</br>
+Calander</br>
+Dashboard</br>
+Activities</br>
 
 
 
