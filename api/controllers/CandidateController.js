@@ -11,6 +11,12 @@ module.exports = {
 	// update candidates
 	// delete candidate
 	// create candidate
+	count:function(req,res){
+
+		Candidate.count().exec(function countCB(error, found) {
+ 		 res.json({ status : "success",data: {count:found}});
+ 	    });
+	},
 
 	list:function(req,res){
 		var currentUser;
