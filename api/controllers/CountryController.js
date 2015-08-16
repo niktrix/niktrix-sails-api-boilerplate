@@ -1,7 +1,7 @@
 /**
- * IndustryController
+ * CountryController
  *
- * @description :: Server-side logic for managing industries
+ * @description :: Server-side logic for managing countries
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
@@ -9,15 +9,15 @@ module.exports = {
 
 	list:function(req,res){
 		 //.paginate({page:{limit:1,page:1}})
-		Industry.find({sort: 'name' }).exec(function(err,industries){
+		Country.find({sort: 'name' }).exec(function(err,countries){
 			 	
 			if(err){
 					res.json({ status : "fail",data: err});
 				}else{
-					res.json({ status : "success",data: industries});
+					res.json({ status : "success",data: countries});
 				}
 		});
-	}
+	},
 	
 };
 
