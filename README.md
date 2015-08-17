@@ -62,3 +62,20 @@ payload to search candidate
 "where":{"createdBy.email":"nicky2@gmail.com"}
 }
 ```
+
+
+Installation Instructions
+```      
+install apache,php,nodejs  
+
+apt-get update
+curl --silent --location https://deb.nodesource.com/setup_0.12 | sudo bash -
+apt-get install --yes nodejs
+apt-get install --yes build-essential
+//apt-get install php5 libapache2-mod-php5 php5-mcrypt php5-curl
+git clone https://github.com/niktrix/sails-api-boilerplate/
+cd sails-api-boilerplate
+npm install
+npm install pm2 -g --unsafe-perm
+pm2 start app.js -x -- --prod
+...
